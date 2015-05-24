@@ -1,0 +1,15 @@
+#   __   __  _______  ___      _______  _______  ______    _______  __   __  _______
+#  |  | |  ||       ||   |    |       ||       ||    _ |  |   _   ||  |_|  ||       |
+#  |  |_|  ||   _   ||   |    |   _   ||    ___||   | ||  |  |_|  ||       ||  _____|
+#  |       ||  | |  ||   |    |  | |  ||   | __ |   |_||_ |       ||       || |_____
+#  |       ||  |_|  ||   |___ |  |_|  ||   ||  ||    __  ||       ||       ||_____  |
+#  |   _   ||       ||       ||       ||   |_| ||   |  | ||   _   || ||_|| | _____| |
+#  |__| |__||_______||_______||_______||_______||___|  |_||__| |__||_|   |_||_______|
+#
+#   Looks like you haven't setup any holograms yet. Join your server and run /holo c first
+#   this will create a text hologram called "first" where you are standing.
+#
+#   /holo title first SPAWN - Will set the Hologram title to spawn
+#   /holo text first Hello World! - Sets the text (can incude colors)
+#
+[]

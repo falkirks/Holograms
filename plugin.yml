@@ -1,0 +1,10 @@
+name: Holograms
+author: Falkirks
+version: 0.1
+api: [1.11.0]
+main: falkirks\holograms\Holograms
+commands:
+  holograms:
+    description: Spawn a hologram
+    usage: /holograms
+    alias: [holo, holgram]
