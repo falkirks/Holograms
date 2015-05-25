@@ -10,6 +10,6 @@
 #   this will create a text hologram called "first" where you are standing.
 #
 #   /holo title first SPAWN - Will set the Hologram title to spawn
-#   /holo text first Hello World! - Sets the text (can incude colors)
+#   /holo text first Hello World! - Sets the text (can include colors)
 #
 []
