@@ -29,10 +29,8 @@ class HologramParser {
                 $class = self::$classList[$data["type"]];
                 return $class::fromData($name, $data);
             }
-            else{
-                return false;
-            }
         }
+        return null;
     }
     public static function getHolograms($array, callable $failure = null){
         self::init();

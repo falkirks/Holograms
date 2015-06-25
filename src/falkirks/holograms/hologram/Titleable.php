@@ -1,4 +1,5 @@
 <?php
+namespace falkirks\holograms\hologram;
 
 /**
  * Holograms implementing this interface have

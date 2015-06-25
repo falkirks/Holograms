@@ -18,15 +18,16 @@ class Holograms extends PluginBase{
         $this->getServer()->getCommandMap()->register("holograms", $this->hologramsCommand);
 
         $this->hologramManager = new HologramManager($this);
-        $this->hologramManager->addHolograms(HologramParser::getHolograms($this->getConfig()->getAll()));
+        $this->getServer()->getScheduler()->scheduleDelayedTask(new HologramRegisterTask($this), 1);
 
     }
     public function onDisable(){
         $out = [];
         foreach($this->hologramManager->getHolograms() as $hologram){
-            array_merge($out, $hologram->toData());
+            $out = array_merge($out, $hologram->toData());
         }
         $this->getConfig()->setAll($out);
+        $this->getConfig()->save();
     }
 
     /**
@@ -42,7 +43,6 @@ class Holograms extends PluginBase{
     public function getHologramManager(){
         return $this->hologramManager;
     }
-
 
 
 }

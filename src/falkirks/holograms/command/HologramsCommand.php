@@ -3,7 +3,9 @@ namespace falkirks\holograms\command;
 
 
 use falkirks\holograms\data\HologramParser;
+use falkirks\holograms\hologram\Textable;
 use falkirks\holograms\hologram\TextHologram;
+use falkirks\holograms\hologram\Titleable;
 use falkirks\holograms\Holograms;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -66,8 +68,8 @@ class HologramsCommand extends Command implements PluginIdentifiableCommand{
                 case 'title':
                     if(isset($args[1])){
                         if (($holo = $this->getPlugin()->getHologramManager()->getHologram($args[1])) !== null) {
-                            if($holo instanceof \Titleable){
-                                $holo->setTitle(isset($args[2]) ? $args[2] : "");
+                            if($holo instanceof Titleable){
+                                $holo->setTitle(isset($args[2]) ? implode(" ", array_slice($args, 2)) : "");
                             }
                             else{
                                 $sender->sendMessage("That hologram is not \"titleable\"");
@@ -87,8 +89,8 @@ class HologramsCommand extends Command implements PluginIdentifiableCommand{
                 case 'content':
                     if(isset($args[1])){
                         if (($holo = $this->getPlugin()->getHologramManager()->getHologram($args[1])) !== null) {
-                            if($holo instanceof \Textable){
-                                $holo->setText(isset($args[2]) ? $args[2] : "");
+                            if($holo instanceof Textable){
+                                $holo->setText(isset($args[2]) ? implode(" ", array_slice($args, 2)) : "");
                             }
                             else{
                                 $sender->sendMessage("That hologram is not \"textable\"");
