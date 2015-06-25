@@ -2,7 +2,6 @@
 namespace falkirks\holograms;
 
 use falkirks\holograms\command\HologramsCommand;
-use falkirks\holograms\data\HologramParser;
 use falkirks\holograms\hologram\HologramManager;
 use pocketmine\plugin\PluginBase;
 
